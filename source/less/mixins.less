@@ -1,0 +1,27 @@
+.list-style-none() {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.transition(@delay: 0) {
+  transition-property: transform, opacity, color, background-color, border-color, box-shadow, top, left, right, bottom, width, height;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition-delay: @delay;
+}
+
+.transition(svg) {
+  transition-property: opacity, fill;
+}
+
+.transition(opacity) {
+  transition-property: opacity;
+}
+
+.block-img(@maxWidth) {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: @maxWidth;
+}

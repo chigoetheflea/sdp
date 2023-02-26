@@ -1,0 +1,166 @@
+.footer__column {
+  &--first {
+    flex-direction: column;
+  }
+
+  &--second {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--third {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.footer__phone {
+  font-family: Brigada, 'Times New Roman', Times, serif;
+  color: @white;
+  font-size: 68px;
+  line-height: 72px;
+
+  &:hover,
+  &:focus {
+    color: @gold;
+  }
+
+  &:active {
+    color: @gold2;
+  }
+}
+
+.footer__email {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1;
+
+  &:hover,
+  &:focus {
+    color: @white;
+  }
+
+  &:active {
+    color: @gold2;
+  }
+}
+
+.footer__address {
+  margin-top: 50px;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.footer__logo {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.footer__copyright {
+  margin: 30px 0 0 0;
+}
+
+@media (max-width: @break-point-0) {
+  .footer__phone {
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .footer__email {
+    font-size: 28px;
+  }
+
+  .footer__address {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: @break-point-1) {
+  .footer__phone {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .footer__email {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: @break-point-2) {
+  .footer__columns {
+    flex-direction: column;
+  }
+
+  .footer__column {
+    width: 100%;
+
+    &--first,
+    &--second,
+    &--third {
+      align-items: center;
+    }
+
+    &--first {
+      order: 1;
+      margin-top: 35px;
+    }
+
+    &--third {
+      order: 2;
+      margin-top: 35px;
+    }
+  }
+
+  .footer__address {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: @break-point-tablet) {
+  .footer__logo {
+    svg {
+      width: 80px;
+      height: 62px;
+    }
+  }
+}
+
+@media (max-width: @break-point-tablet) {
+  .footer__address {
+    margin-top: 25px;
+  }
+
+  .footer__column {
+    &--first {
+      margin-top: 25px;
+    }
+  }
+}
+
+@media (max-width: @break-point-mobile) {
+  .footer__phone {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .footer__email {
+    font-size: 22px;
+  }
+
+  .footer__address {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}

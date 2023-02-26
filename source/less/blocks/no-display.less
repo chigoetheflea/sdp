@@ -1,0 +1,21 @@
+.no-display {
+  &--1024 {
+    display: inline;
+  }
+}
+
+@media (max-width: @break-point-2) {
+  .no-display {
+    &--1024 {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: @break-point-4) {
+  .no-display {
+    &--1024 {
+      display: inline;
+    }
+  }
+}

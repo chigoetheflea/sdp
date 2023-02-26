@@ -1,0 +1,93 @@
+.single-content__column {
+  flex-direction: column;
+
+  p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.single-content__subtitle {
+  margin-bottom: 30px;
+}
+
+.single-content__quote {
+  position: relative;
+
+  padding: 20px 0 20px 35px;
+  margin-left: 20px;
+
+  color: @gold2;
+
+  border-left: 2px solid @gold;
+
+  &::before {
+    position: absolute;
+    left: -50px;
+    top: 18px;
+
+    color: @gold;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 4px;
+
+    transform: rotate(-90deg);
+
+    content: 'Цитата';
+  }
+
+  &--en {
+    &::before {
+      content: 'Quote';
+    }
+  }
+}
+
+.single-content__color-gold {
+  color: @gold;
+}
+
+.single-content__gallery {
+  margin-bottom: 75px;
+}
+
+@media (max-width: @break-point-tablet) {
+  .single-content__columns {
+    flex-direction: column;
+  }
+
+  .single-content__column {
+    width: 100%;
+  }
+
+  .single-content__sidebar {
+    margin-top: 50px;
+  }
+
+  .single-content__gallery {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: @break-point-3) {
+  .single-content__quote {
+    padding: 10px 0 10px 20px;
+  }
+
+  .single-content__sidebar {
+    margin-top: 35px;
+  }
+
+  .single-content__gallery {
+    margin-bottom: 35px;
+  }
+}

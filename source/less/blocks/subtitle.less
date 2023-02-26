@@ -1,0 +1,25 @@
+.subtitle {
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 32px;
+
+  &--center {
+    text-align: center;
+  }
+}
+
+@media (max-width: @break-point-3) {
+  .subtitle {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: @break-point-mobile) {
+  .subtitle {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 700;
+  }
+}

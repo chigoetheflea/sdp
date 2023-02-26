@@ -1,0 +1,35 @@
+.latest__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.latest__slider {
+  margin-top: 75px;
+}
+
+.latest__source {
+  display: none;
+}
+
+@media (max-width: @break-point-tablet) {
+  .latest__header {
+    h2 {
+      max-width: 50%;
+    }
+  }
+}
+
+@media (max-width: @break-point-3) {
+  .latest__header {
+    flex-direction: column;
+
+    h2 {
+      max-width: 100%;
+    }
+  }
+
+  .latest__link {
+    align-self: flex-start;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,129 @@
+@keyframes burger-top-move {
+  0% {transform: translateY(0);}
+  50% {transform: translateY(10px);}
+  100% {transform: translateY(10px) rotate(45deg);}
+}
+
+@keyframes burger-top-close {
+  0% {transform: translateY(10px) rotate(45deg);}
+  50% {transform: translateY(10px);}
+  100% {transform: translateY(0);}
+}
+
+@keyframes burger-bottom-move {
+  0% {transform: translateY(0);}
+  50% {transform: translateY(-10px);}
+  100% {transform: translateY(-10px) rotate(-45deg);}
+}
+
+@keyframes burger-bottom-close {
+  0% {transform: translateY(-10px) rotate(-45deg);}
+  50% {transform: translateY(-10px);}
+  100% {transform: translateY(0);}
+}
+
+@keyframes fade-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fade-out {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@keyframes bounce {
+  0% {transform: scale(1);}
+  50% {transform: scale(0.8);}
+  75% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+
+@keyframes bounce-middle {
+  0% {transform: scale(1, 1);}
+  50% {transform: scale(1.2, 1.2);}
+  100% {transform: scale(1, 1);}
+}
+
+@keyframes big-bounce {
+  0% {transform: scale(1);}
+  50% {transform: scale(0.96);}
+  75% {transform: scale(1.04);}
+  100% {transform: scale(1.02);}
+}
+
+@keyframes endless-left {
+  0% {transform: translateX(-100vw);}
+  100% {transform: translateX(0);}
+}
+
+@keyframes endless-left-close {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-100vw);}
+}
+
+@keyframes endless-right {
+  0% {transform: translateX(0px);}
+  100% {transform: translateX(700px);}
+}
+
+@keyframes endless-top {
+  0% {transform: translateY(-100vh);}
+  100% {transform: translateX(0);}
+}
+
+@keyframes endless-top-close {
+  0% {transform: translateX(0);}
+  100% {transform: translateY(-100vh);}
+}
+
+@keyframes slide {
+  0% {transform: translateX(100%); width: 100vw;}
+  50% {transform: translateX(100%); width: 100vw;}
+  75% {transform: translateX(-2%); width: 102vw;}
+  100% {transform: translateX(0); width: 100vw;}
+}
+
+@keyframes show {
+  0% {transform: translateY(10px);}
+  50% {transform: translateY(-5px);}
+  75% {transform: translateY(0);}
+  100% {transform: translateY(0);}
+}
+
+// @keyframes fill-change {
+//   0% {fill: @blue;}
+//   50% {fill: @red;}
+//   100% {fill: @blue;}
+// }
+
+@keyframes wheel-rotation {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(-360deg);}
+}
+
+@keyframes car-moving {
+  0% {transform: translate(0);}
+  25% {transform: translate(30px);}
+  50% {transform: translate(-10px);}
+  75% {transform: translate(10px);}
+  100% {transform: translate(0);}
+}
+
+@keyframes car-moving-2 {
+  0% {transform: translate(0) scale(0.8);}
+  25% {transform: translate(30px) scale(0.8);}
+  50% {transform: translate(-10px) scale(0.8);}
+  75% {transform: translate(10px) scale(0.8);}
+  100% {transform: translate(0) scale(0.8);}
+}
+
+@keyframes run {
+  0% {transform: translateY(-1000px);}
+  100% {transform: translateY(1000px);}
+}
+
+@keyframes run-horizont {
+  0% {transform: translateX(-1000px);}
+  100% {transform: translateX(1000px);}
+}

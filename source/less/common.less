@@ -1,0 +1,56 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+
+  min-width: 360px;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  color: @white;
+
+  background-color: @gray;
+
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 1000% !important;
+}
+
+a {
+  .transition();
+
+  text-decoration: none;
+  color: @gold;
+
+  &:hover,
+  &:focus {
+    color: @gold2;
+  }
+
+  &:active {
+    color: @gold2;
+  }
+}
+
+em, i {
+  font-style: normal !important;
+}
+
+p:empty {
+  display: none !important;
+}

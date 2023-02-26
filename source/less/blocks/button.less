@@ -1,0 +1,134 @@
+.button {
+  .transition();
+
+  display: inline-block;
+
+  margin: 0;
+  width: 100%;
+  max-width: 300px;
+  padding: 24px 10px;
+
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  border: 2px solid;
+  cursor: pointer;
+
+  &--black {
+    color: @gray;
+    border-color: @gray;
+
+    &:hover,
+    &:focus {
+      background-color: @gray;
+      color: @gold;
+    }
+
+    &:active {
+      color: @gold2;
+    }
+  }
+
+  &--gold {
+    border-color: @gold;
+    color: @gold;
+
+    &:hover,
+    &:focus {
+      background-color: @gold;
+      color: @gray;
+
+    }
+
+    &:active {
+      background-color: @gold2;
+      border-color: @gold2;
+    }
+  }
+
+  &--fill {
+    color: @gray;
+    border-color: @gold;
+    background-color: @gold;
+
+    &:hover,
+    &:focus {
+      color: @gold;
+      background-color: @darkgray;
+      border-color: @darkgray;
+    }
+
+    &:active {
+      color: @white;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      cursor: default;
+      opacity: 0.5;
+    }
+  }
+
+  &--link {
+    padding: 0;
+    max-width: auto;
+    width: auto;
+
+    color: @white;
+    text-decoration:underline;
+
+    border: none;
+    background: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: @gold;
+    }
+
+    &:active {
+      color: @gold2;
+    }
+  }
+
+  &--link&--gold {
+    color: @gold;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: @gold;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: @gold2;
+    }
+  }
+}
+
+@media (max-width: @break-point-0) {
+  .button {
+    max-width: 250px;
+    padding: 20px 10px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: @break-point-3) {
+  .button {
+    max-width: 200px;
+    padding: 15px 15px;
+    font-size: 16px;
+    line-height: 18px;
+
+    &--link {
+      padding: 0;
+    }
+  }
+}

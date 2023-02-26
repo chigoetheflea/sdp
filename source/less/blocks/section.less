@@ -1,0 +1,31 @@
+.section {
+  position: relative;
+  z-index: 10;
+  min-height: 900px;
+  overflow-x: hidden;
+
+  &--white {
+    color: @gray;
+    background-color: @white;
+  }
+
+  &--auto-height {
+    min-height: 0;
+  }
+}
+
+@media (max-width: @break-point-0) {
+  .section {
+    min-height: 800px;
+
+    &--auto-height {
+      min-height: 0;
+    }
+  }
+}
+
+@media (max-width: @break-point-tablet) {
+  .section {
+    min-height: 0;
+  }
+}

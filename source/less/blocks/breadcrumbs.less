@@ -1,0 +1,26 @@
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+
+  color: @gold;
+
+  border-top: 2px solid @gold;
+
+  a {
+    text-decoration: underline;
+
+    &:focus,
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: @break-point-3) {
+  .breadcrumbs {
+    display: none;
+  }
+}

@@ -1,0 +1,300 @@
+/* GLOBAL STYLE BUTTONS */
+@color-vkontakte: #48729E;
+@color-facebook: #3C5A98;
+@color-twitter: #00ACED;
+@color-googleplus: #C25234;
+@color-odnoklassniki: #FF9F4D;
+@color-moimir: #2164AD;
+@color-lj: #0D425A;
+@color-linkedin: #0083BE;
+
+@color-vkontakte-active: darken(@color-vkontakte, 5%);
+@color-facebook-active: darken(@color-facebook, 5%);
+@color-twitter-active: darken(@color-twitter, 5%);
+@color-googleplus-active: darken(@color-googleplus, 5%);
+@color-odnoklassniki-active: darken(@color-odnoklassniki, 5%);
+@color-moimir-active: darken(@color-moimir, 5%);
+@color-lj-active: darken(@color-lj, 5%);
+@color-linkedin-active: darken(@color-linkedin, 5%);
+
+@font-face {
+  font-family: 'social-icon';
+  src:    url('../fonts/icons/social-icon.eot?pzyb1y');
+  src:    url('../fonts/icons/social-icon.eot?pzyb1y#iefix') format('embedded-opentype'),
+  url('../fonts/icons/social-icon.ttf?pzyb1y') format('truetype'),
+  url('../fonts/icons/social-icon.woff?pzyb1y') format('woff'),
+  url('../fonts/icons/social-icon.svg?pzyb1y#social-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.social-button__icon:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'social-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+//
+.b-social-button--googleplus {
+  .social-button__icon {
+    &:before {
+      content: "\e907";
+    }
+  }
+}
+.b-social-button--facebook {
+  .social-button__icon {
+    &:before {
+      content: "\e90a";
+    }
+  }
+}
+.b-social-button--odnoklassniki {
+  .social-button__icon {
+    &:before {
+      content: "\e909";
+    }
+  }
+}
+.b-social-button--vkontakte {
+  .social-button__icon {
+    &:before {
+      content: "\e904";
+    }
+  }
+}
+.b-social-button--twitter {
+  .social-button__icon {
+    &:before {
+      content: "\e905";
+    }
+  }
+}
+.b-social-button--moimir {
+  .social-button__icon {
+    &:before {
+      content: "\e908";
+    }
+  }
+}
+
+.b-social-button--lj {
+  .social-button__icon {
+    &:before {
+      content: "\e901";
+    }
+  }
+}
+
+.b-social-button--linkedin {
+  .social-button__icon {
+    &:before {
+      content: "\e906";
+    }
+  }
+}
+
+.container-social-buttons {
+  display: flex;
+
+  font-size: 0;
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+.b-social-button {
+  .transition();
+
+  width: 25%;
+  margin-right: 0;
+  margin-bottom: 0;
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  color: #000;
+  cursor: pointer;
+  &:last-child {
+    border-right: 0;
+  }
+  .social-button__components {
+    display: flex;
+    justify-content: center;
+    table-layout: fixed;
+    width: 100%;
+    min-height: 40px;
+  }
+  .social-button__icon {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0.2em;
+    line-height: 1px;
+  }
+  .social-button__text,
+  .social-button__count {
+    display: table-cell;
+    font-size: 0.5em;
+    padding: 5px 8px;
+    vertical-align: middle;
+  }
+  .social-button__count--empty {
+    &[data-count='0'] {
+      display: none;
+    }
+  }
+}
+
+
+/* DEFAULT THEME */
+.b-social-button--default {
+  background: #EFEFEF;
+  .social-button__components {
+    & > div {
+      border-right: 1px solid #E0E0E0;
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+  .social-button__icon {
+    background: #FFF;
+    &:before {
+      color: #A9ADB6;
+    }
+  }
+  &:hover {
+    background: #FFF;
+    .social-button__icon {
+      border-right-color: transparent;
+      &:before {
+        color: #FFF;
+      }
+    }
+  }
+
+  &.b-social-button--googleplus {
+    &:hover {
+      .social-button__icon {
+        background-color: @color-googleplus;
+      }
+    }
+  }
+  &.b-social-button--facebook {
+    &:hover {
+      .social-button__icon {
+        background-color: @color-facebook;
+      }
+    }
+  }
+  &.b-social-button--odnoklassniki {
+    &:hover {
+      .social-button__icon {
+        background-color: @color-odnoklassniki;
+      }
+    }
+  }
+  &.b-social-button--vkontakte {
+    &:hover {
+      .social-button__icon {
+        background-color: @color-vkontakte;
+      }
+    }
+  }
+  &.b-social-button--twitter {
+    &:hover {
+      .social-button__icon {
+        background-color: @color-twitter;
+      }
+    }
+  }
+  &.b-social-button--moimir {
+    &:hover {
+      .social-button__icon {
+        background-color: @color-moimir;
+      }
+    }
+  }
+  &.b-social-button--lj {
+    &:hover {
+      .social-button__icon {
+        background-color: @color-lj;
+      }
+    }
+  }
+  &.b-social-button--linkedin {
+    &:hover {
+      .social-button__icon {
+        background-color: @color-linkedin;
+      }
+    }
+  }
+}
+
+
+/* COLOR THEME */
+.b-social-button--color {
+  margin-right: 0;
+  background-color: #FFF;
+  .social-button__components {
+    color: #FFF;
+  }
+
+  &.b-social-button--googleplus {
+    background-color: @color-googleplus;
+    &:hover {
+      background-color: @color-googleplus-active;
+    }
+  }
+  &.b-social-button--facebook {
+    background-color: @color-facebook;
+    &:hover {
+      background-color: @color-facebook-active;
+    }
+  }
+  &.b-social-button--odnoklassniki {
+    background-color: @color-odnoklassniki;
+    &:hover {
+      background-color: @color-odnoklassniki-active;
+    }
+  }
+  &.b-social-button--vkontakte {
+    background-color: @color-vkontakte;
+    &:hover {
+      background-color: @color-vkontakte-active;
+    }
+  }
+  &.b-social-button--twitter {
+    background-color: @color-twitter;
+    &:hover {
+      background-color: @color-twitter-active;
+    }
+  }
+  &.b-social-button--moimir {
+    background-color: @color-moimir;
+    &:hover {
+      background-color: @color-moimir-active;
+    }
+  }
+  &.b-social-button--lj {
+    background-color: @color-lj;
+    &:hover {
+      background-color: @color-lj-active;
+    }
+  }
+  &.b-social-button--linkedin {
+    background-color: @color-linkedin;
+    &:hover {
+      background-color: @color-linkedin-active;
+    }
+  }
+}
