@@ -18,6 +18,10 @@
   border: 2px solid;
   cursor: pointer;
 
+  &:focus {
+    outline-offset: 3px;
+  }
+
   &--black {
     color: @gray;
     border-color: @gray;
@@ -30,6 +34,10 @@
 
     &:active {
       color: @gold2;
+    }
+
+    &:focus {
+      outline: 1px dotted @gray;
     }
   }
 
@@ -48,6 +56,10 @@
       background-color: @gold2;
       border-color: @gold2;
     }
+
+    &:focus {
+      outline: 1px dotted @gold2;
+    }
   }
 
   &--fill {
@@ -64,6 +76,10 @@
 
     &:active {
       color: @white;
+    }
+
+    &:focus {
+      outline: 1px dotted @gold2;
     }
 
     &:disabled {
@@ -93,6 +109,10 @@
     &:active {
       color: @gold2;
     }
+
+    &:focus {
+      outline: 1px dotted @white;
+    }
   }
 
   &--link&--gold {
@@ -107,6 +127,10 @@
 
     &:active {
       color: @gold2;
+    }
+
+    &:focus {
+      outline: 1px dotted @gold2;
     }
   }
 }

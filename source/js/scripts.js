@@ -123,10 +123,15 @@ document.addEventListener(`DOMContentLoaded`, function() {
         evt.preventDefault();
 
         const target = document.querySelector(evt.target.dataset.target);
+        const slide = evt.target.dataset.slide;
         const position = target.getBoundingClientRect().top;
 
         if (isMenuOpen(menuWrapper)) {
           closeMenu();
+        }
+
+        if (slide) {
+          sliderServices.slideTo(parseInt(slide));
         }
 
         window.scrollBy({
@@ -235,23 +240,25 @@ document.addEventListener(`DOMContentLoaded`, function() {
       if (sliderSettings.isResponsive) {
         window.addEventListener(`resize`, handleWindowResize.bind(null, sourceSlides, sliderContainer, sliderDots, sliderSettings));
       }
+
+      return slider;
     }
   };
 
-  initSlider(document.querySelector(`.js-slider-first-screen`), {
+  const sliderTitle = initSlider(document.querySelector(`.js-slider-first-screen`), {
     ...SlidersSettings,
     slideshow: true,
     slideshowInterval: 5000,
   });
 
-  initSlider(document.querySelector(`.js-slider-services`));
+  const sliderServices = initSlider(document.querySelector(`.js-slider-services`));
 
-  initSlider(document.querySelector(`.js-slider-latest-news`), {
+  const sliderNews = initSlider(document.querySelector(`.js-slider-latest-news`), {
     ...SlidersSettings,
     isResponsive: true,
   });
 
-  initSlider(document.querySelector(`.js-slider-cases`), {
+  const sliderCases = initSlider(document.querySelector(`.js-slider-cases`), {
     ...SlidersSettings,
     isResponsive: true,
   });
