@@ -7,3 +7,19 @@
     margin-bottom: 50px;
   }
 }
+
+@media (max-width: @break-point-tablet) {
+  .archive__item {
+    &:nth-child(2n) {
+      margin-top: 0;
+    }
+
+    &:nth-child(2n+1) {
+      margin-bottom: 0;
+    }
+  }
+
+  .archive__columns {
+    gap: 30px;
+  }
+}
