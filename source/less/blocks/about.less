@@ -71,6 +71,7 @@
 @media (max-width: @break-point-01) {
   .about__button {
     transform: translate(0, -50%);
+    top: 70px;
   }
 }
 
@@ -81,7 +82,7 @@
   }
 
   .about__button {
-    // transform: translate(25%, -50%);
+    top: 40px;
   }
 
   .about__title,
@@ -97,13 +98,20 @@
   }
 
   .about__button {
-    transform: translate(50%, -50%);
+    transform: translate(50%, 0);
+    top: auto;
+    bottom: 30px;
   }
 
   .about__title,
   .about__text,
   .about__awards {
     margin-top: 35px;
+  }
+
+  .about__img {
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -113,7 +121,7 @@
   }
 
   .about__button {
-    transform: translate(0, -50%);
+    transform: translate(0, 0);
   }
 
   .about__cta-wrapper {
